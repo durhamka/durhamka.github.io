@@ -11,6 +11,17 @@ body {
     font-weight: lighter;
     padding: 0;
     margin: 0;
+    background-color: #F5F5F5;
+}
+
+#container {
+    display: block;
+    max-width: 1400px;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 6px 0px rgba(0, 0, 0, 0.3);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+    background-color: #FFFFFF;
 }
 
 h1 {
@@ -18,9 +29,8 @@ h1 {
     margin: 0;
     font-weight: normal;
     text-align: center;
-    border-bottom: 1.5px solid #808080;
-    padding-bottom: 20px;
-    color: #808080;
+    padding-bottom: 60px;
+    color: #400160;
 }
 
 h2 {
@@ -38,16 +48,19 @@ header h1 {
 header,
 section,
 footer {
-    padding: 100px 150px
+    padding: 60px 120px
 }
 
 .loves,
 footer {
     text-align: center;
 }
+
 p {
     font-size: 18px;
     line-height: 1.5;
+    color: #848484;
+    padding-bottom: 30px;
 }
 
 
@@ -65,31 +78,46 @@ header {
 #image-container {
     position: absolute;
     top: -10px;
-    left: -10px;
+    left: 0px;
     bottom: -10px;
-    right: -10px;
-    background: url(../images/denver3.jpg) no-repeat fixed;
+    right: 0px;
+    background: url(images/denver3.jpg) no-repeat center center fixed;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     filter: blur(5px);
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(6px) saturate(180%);
+    -moz-filter: blur(6px) saturate(180%);
+    -o-filter: blur(6px) saturate(180%);
+    -ms-filter: blur(6px) saturate(180%);
 }
 
 header h1 {
     position: absolute;
-    top: 150px;
-    font-size: 115px;
+    top: 140px;
+    font-size: 118px;
     color: #ffffff;
     left: 20px;
     right: 20px;    
 }
+
+.divider {
+    width: 100px;
+    height: 4px;
+    top:220px;
+    background: #FFFFFF;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: relative;
+    left: 46%;
+}
+
 header h2 {
     position: absolute;
-    top: 250px;
-    font-size: 32px;
+    top: 290px;
+    font-size: 30px;
     color: #ffffff;
     left: 20px;
     right: 20px;
@@ -106,24 +134,28 @@ nav {
     z-index: 1;
     background-color: white;
     border-top: thick solid #AA00FF;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px 0px 1px 0px rgba(0, 0, 0, 0.2);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     display: inline-block; /* changes links from default inline element to add padding properly */
     text-decoration: none; /* removes underline */
-    margin: 20px; /* adds space around each link */
+    margin: -5px 20px 20px 20px ; /* adds space around each link */
     color: #808080;
     font-size: 20px;
     font-style: normal;
     font-weight: lighter;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
 }
 
 nav a:hover {
-    background: #808080;
-    color: #ffffff;
-    border-radius: 10px;
+    background-color:#AA00FF;
+    color: #FFFFFF;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
 
@@ -133,21 +165,32 @@ nav a:hover {
     overflow: hidden;
 }
 
+.resumen h1 {
+    font-weight: 600;
+    border-bottom: 1.5px solid #ccc;
+}
+
 .resumen h3 {
-    padding-top: 10px;
-    color: #808080;
+    padding-top: 30px;
+    color: #400160;
+    font-weight: 600;
 }
 
 .resumen p {
-    color: #808080;
+    color: #848484;
+    font-weight: 100;
+}
+
+.detail {
+    margin-top: -30px;
+    font-style: italic;
+    opacity: .5;
 }
 
 #line-break {
     width: 100px;
     height: 1px;
-    background: #808080;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    background: #ccc;
 }
 
 /* Fotos
@@ -155,11 +198,15 @@ nav a:hover {
 .fotos {
     margin-top: -100px;
 }
+
+.fotos h1 {
+    border-top: 1.5px solid #ccc;
+    padding-top: 60px;
+}
+
 .fotos img {
-    height: 250px;
-    width: 250px;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 286px;
+
 }
 
 
@@ -170,8 +217,118 @@ footer {
     border-bottom: thick solid #AA00FF;
 }
 
-footer img {
-    height: 45px;
-    width: 50px;
-    margin: 30px;
+footer h1 {
+    margin-top: 30px;
+    border-bottom: 1.5px solid #ccc;
 }
+
+footer img {
+    width: 50px;
+    margin: 60px 30px 0px 30px;
+}
+
+/* MOBILE - responsive design
+-----------------------------------------*/
+
+@media only screen and (max-width: 1400px) {
+
+    .fotos img {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .fotos img {
+        width: 320px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #container {
+        display: inline-block;
+    }
+
+    header,
+    section,
+    footer {
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    header h2 {
+        margin-top: 20px;
+    }
+
+    header h1 {
+        font-size: 100px;
+        margin-top: 0px;
+    }
+
+    .divider {
+        top:200px;
+        left: 43%;
+    }
+
+    nav a {
+        margin: -5px 5px 5px 5px ; /* adds space around each link */
+        font-size: 18px;
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header h1 {
+        font-size: 100px;
+        margin-top: -60px;
+    }
+
+    header h2 {
+        margin-top: 80px;
+    }
+
+    .divider {
+        top:280px;
+        left: 43%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    header,
+    section,
+    footer {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding-top: 30px;
+    }
+
+    header h2 {
+        margin-top: 80px;
+    }
+
+    header h1 {
+        font-size: 60px;
+        margin-top: -30px;
+    }
+
+    header {
+        margin-top: 40px;
+    }
+
+    .divider {
+        top:260px;
+        left: 36%;
+    }
+}
+
