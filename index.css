@@ -334,8 +334,8 @@ footer img {
 @media only screen and (max-width: 600px) {
 
     header,
-    section, 
-    {
+    section,
+    footer {
         padding: 40px;
     }
 
